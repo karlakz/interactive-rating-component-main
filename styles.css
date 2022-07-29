@@ -85,13 +85,14 @@ body * + * {
 }
 
 button {
-  width: 20em;
+  width: 100%;
   background-color: var(--orange-color);
-  padding: 0.3em 0.5em;
+  padding: 0.5em 0.5em;
   border-radius: 1.5em;
   color: var(--white-color);
   text-transform: uppercase;
-  /* text-indent: 0.7; */
+  letter-spacing: 2px;
+  transition: all 250ms;
 }
 
 button:hover {
