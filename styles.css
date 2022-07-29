@@ -1,0 +1,150 @@
+:root {
+  box-sizing: border-box;
+  --white-color: hsl(0, 0%, 100%);
+  --light-grey-color: hsl(221, 20%, 82%);
+  --medium-grey-color: hsl(213, 17%, 26%);
+  --dark-blue-color: hsl(213, 19%, 18%);
+  --very-dark-blue-color: hsl(216, 12%, 8%);
+  --orange-color: hsl(25, 97%, 53%);
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Overpass", sans-serif;
+  font-size: 1em;
+  background-color: var(--very-dark-blue-color);
+}
+
+body * + * {
+  margin-top: 0.8em;
+}
+
+.main,
+.thanks-window {
+  display: block;
+  margin: 8rem auto;
+  padding: 1rem;
+  width: 23em;
+  font-size: 0.8em;
+  border-radius: 0.8em;
+  background-color: var(--dark-blue-color);
+  color: hsl(0, 0%, 100%);
+}
+
+.star,
+.circle {
+  width: 2.8em;
+  padding: 0.7em;
+  border-radius: 50%;
+  background-color: var(--medium-grey-color);
+  text-align: center;
+}
+
+.question {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.feedback {
+  opacity: 0.7;
+}
+
+.ratings {
+  margin: 1em 0;
+  padding: 1em 0;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.flex-child-1:hover ~ .flex-child-2,
+.flex-child-2:hover ~ .flex-child-3,
+.flex-child-3:hover ~ .flex-child-4,
+.flex-child-4:hover ~ .flex-child-5 {
+  background-color: var(--light-grey-color);
+  color: var(--white-color);
+  opacity: 1;
+}
+
+.circle {
+  opacity: 0.7;
+  margin-top: 0;
+}
+
+.circle:hover {
+  background-color: var(--orange-color);
+  cursor: pointer;
+  color: var(--white-color);
+  opacity: 1;
+}
+
+button {
+  width: 20em;
+  background-color: var(--orange-color);
+  padding: 0.3em 0.5em;
+  border-radius: 1.5em;
+  color: var(--white-color);
+  text-transform: uppercase;
+  /* text-indent: 0.7; */
+}
+
+button:hover {
+  background-color: var(--white-color);
+  color: var(--orange-color);
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--white-color);
+  opacity: 0.7;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+.thanks-window {
+  display: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.selection {
+  color: var(--orange-color);
+  font-size: 0.9em;
+  background-color: hsl(220, 10%, 30%);
+  width: 14em;
+  padding: 0.5em 0.6em;
+  text-align: center;
+  margin: 3em auto 0;
+  border-radius: 0.8em;
+}
+
+.thankyou {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.appreciation {
+  opacity: 0.6;
+  margin-top: 0.5em;
+}
+
+@media only screen and (min-width: 1440px) {
+  .thanks-window {
+    left: 25rem;
+    width: 34rem;
+  }
+}
